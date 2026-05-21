@@ -1,0 +1,35 @@
+.sidebar {
+    background-color: #1f232a;
+    border: 3px solid #5c0000;
+	width: 25vw;
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+	flex-shrink: 0;
+    gap: 10px;
+}
+
+.sidebar_link {
+	color: grey;
+	padding-left: 20px;
+	font-size: 20px;
+	font-style: normal;
+	text-decoration: none;
+	font-family: "Impact";
+}
+
+.sidebar_title {
+	color: #a30000;
+	text-align: center;
+	font-family: "Phosphate", sans-serif;
+	display: flex;
+    justify-content: center;
+	font-size: 64px;
+}
+
+.sidebar_subtitle {
+	padding-left: 10px;
+	font-family: "Phosphate";
+	color: #a30000;
+	font-size: 28px;
+}

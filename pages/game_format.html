@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FGBN The Website</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="script.js"></script>
+</head>
+<div id="sidebar-container"></div>
+<body class="background">
+
+</body>
+
+<script>
+fetch("/pages/sidebar.html")
+    .then(response => response.text())
+    .then(html => {
+        document.getElementById("sidebar-container").innerHTML = html;
+    })
+    .catch(error => {
+        console.error("Failed to load sidebar:", error);
+    });
+</script>
+</html>
