@@ -2,14 +2,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.comcss2?family=Monoton&display=swap" rel="stylesheet">
 
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>FGBN The Website</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="script.js"></script>
 </head>
 <body>
@@ -30,19 +30,19 @@
             <div style="display: flex; flex-direction: column;">
             <h4>View or Sign Up for the next FGBN:</h4>
             <p>Please follow this link:</p>
-            <a href="/pages/fgbn3.html" class="body_link" style="padding-left: 60px;">Fighting Game Bingo Night: Absolue Anarchy</a>
+            <a href="pages/fgbn3.html" class="body_link" style="padding-left: 60px;">Fighting Game Bingo Night: Absolue Anarchy</a>
             <br style="margin: 20px;">
 
             <h4>Learn the event's format:</h4>
             <br style="margin: 10px;">
-            <a href="/pages/game_format.html" class="body_link" style="padding-left: 60px;">Fighting Game Bingo Night's Game Format</a>
+            <a href="pages/game_format.html" class="body_link" style="padding-left: 60px;">Fighting Game Bingo Night's Game Format</a>
             <br style="margin: 20px;">
 
 
             <h4 style="margin-top: auto; margin-bottom: 0px;">Previous Fighting Game Bingo Nights</h4>
             </div>
 
-            <img src="/images/knight.jpeg" 
+            <img src="images/knight.jpeg" 
             alt="Random drawing of a knight" width="200" height="333"
             style="margin-left: auto;">
         </div>
@@ -53,12 +53,12 @@
                 <th>Location</th>
             </tr>
             <tr>
-                <td><a href="/pages/fgbn1.html" class="body_link">Fighting Game Bingo Night</a></td>
+                <td><a href="pages/fgbn1.html" class="body_link">Fighting Game Bingo Night</a></td>
                 <td>November, 2023</td>
                 <td>Atchison, KS</td>  
             </tr>
             <tr>
-                <td><a href="/pages/fgbn2.html" class="body_link">Fighting Game Bingo Night 2</a></td>
+                <td><a href="pages/fgbn2.html" class="body_link">Fighting Game Bingo Night 2</a></td>
                 <td>January 4, 2025</td>
                 <td>Milford, NH</td>
             </tr>
@@ -79,7 +79,7 @@
 </body>
 
 <script>
-fetch("/pages/sidebar.html")
+fetch("pages/sidebar.html")
     .then(response => response.text())
     .then(html => {
         document.getElementById("sidebar-container").innerHTML = html;
