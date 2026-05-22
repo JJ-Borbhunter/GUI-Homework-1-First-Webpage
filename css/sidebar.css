@@ -7,21 +7,26 @@
     flex-direction: column;
 	flex-shrink: 0;
     gap: 10px;
+	position: fixed;
 }
 
 .sidebar_link {
 	color: grey;
 	padding-left: 20px;
+	padding-top: 20px;
 	font-size: 20px;
 	font-style: normal;
 	text-decoration: none;
 	font-family: "Impact";
 }
+.sidebar_link:hover, .sidebar_title:hover {
+	color: blue;
+}
 
 .sidebar_title {
 	color: #a30000;
 	text-align: center;
-	font-family: "Phosphate", sans-serif;
+	font-family: "Monoton", sans-serif;
 	display: flex;
     justify-content: center;
 	font-size: 64px;
@@ -29,7 +34,9 @@
 
 .sidebar_subtitle {
 	padding-left: 10px;
-	font-family: "Phosphate";
+	padding-top: 30px;
+	font-family: "Monoton";
 	color: #a30000;
-	font-size: 28px;
+	font-size: 20px;
+	
 }

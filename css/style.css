@@ -5,10 +5,10 @@ body {
 }
 
 h1 {
-    padding-top: 20px;
-    color: blueviolet;
-    font-family: "Phosphate";
-    font-size: 80px;
+    padding-top: 40px;
+    color: #a30000;
+    font-family: "Monoton";
+    font-size: 61px;
     text-align: center;
     line-height: 0.6;
     margin: 0;
@@ -21,6 +21,37 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    margin: 20px;
+    margin-left: 0px;
+    font-family: "Impact";
+    font-size: 28px;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 0px;
+}
+
+h4 {
+    font-family: "Courier";
+    font-size: 20px;
+    font-style: bold;
+    padding-left: 20px;
+    text-align: left;
+    padding-bottom: 0px;
+    padding-top: 30px;
+    margin: 0px;
+    margin-left: 0px;
+}
+
+p {
+    font-family: "Courier";
+    font-size: 18px;
+    text-align: left;
+    padding-left: 30px;
+    margin: 20px;
+    margin-left: 0px;
+}
+
 .subtitle {
     font-family: "Courier";
     font-size: 30px;
@@ -30,5 +61,75 @@ h2 {
 .content {
     margin: 0px;
     display: block;
-    width: 75vw
+    width: 70vw;
+    padding-left: 26vw;
+}
+
+.ris_subtitle {
+    font-family: "Rubik Broken Fax";
+    /* font-family: "Rubik Wet Paint"; */
+    font-size: 50px;
+    text-align: center;
+    color: darkred;
+}
+
+.img_subtitle {
+    font-family: "Courier";
+    font-size: 12px;
+    text-align: center;
+    color: grey;
+}
+
+.game_container {
+    display: flex;
+    padding-top: 0px;
+}
+
+img {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 5px solid black;
+}
+
+/* img:hover {
+    display: block;
+    margin: 20px auto;
+    transform: scale(2) translate(-200px);
+} */
+
+.body_link {
+	color: #5c0000;
+	font-size: 18px;
+	font-style: normal;
+	text-decoration: none;
+	font-family: "Impact";
+}
+
+a:hover {
+    color: blue;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 30px;
+    box-sizing: border-box;
+}
+
+th, td {
+    border: 1px solid #5c0000;
+    padding: 8px;
+    text-align: left;
+    font-size: 18px;
+}
+
+th {
+    background-color: #1f232a;
+    color: #a30000;
+    font-family: "Impact";
+}
+
+td {
+    font-family: "Courier";
 }
