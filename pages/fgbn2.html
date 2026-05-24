@@ -9,7 +9,7 @@
 <head>
   <meta charset="utf-8">
   <title>FGBN The Website</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <script src="script.js"></script>
 </head>
 <body>
@@ -38,7 +38,7 @@
             </p>
             </div>
             <div>
-                 <img src="/images/Bingo2.png" alt="FGBN2 Bingo card" width="350" height="450">
+                 <img src="../images/Bingo2.png" alt="FGBN2 Bingo card" width="350" height="450">
                  <div class="img_subtitle">An emaple of the new bingo card</div>
             </div>
         </div>
@@ -194,7 +194,7 @@
 </body>
 
 <script>
-fetch("/pages/sidebar.html")
+fetch("sidebar.html")
     .then(response => response.text())
     .then(html => {
         document.getElementById("sidebar-container").innerHTML = html;
@@ -202,5 +202,5 @@ fetch("/pages/sidebar.html")
     .catch(error => {
         console.error("Failed to load sidebar:", error);
     });
-</script>
+</script> 
 </html>
