@@ -1,9 +1,19 @@
+/* 
+body gets a light blue background, stretches to the edges of the page, 
+and has a horizontal layout
+*/
 body {
     background-color: lightskyblue;
     margin: 0;
     display: flex;
 }
 
+/* 
+h1 represents the first half of the events title, is used once 
+on every page for the words "Fighting Game" in "Fighting Game Bingo Night"
+
+Very large centered red text in the event's primary font, the google font Monoton
+*/
 h1 {
     padding-top: 40px;
     color: #a30000;
@@ -14,13 +24,22 @@ h1 {
     margin: 0;
 }
 
+/*
+h2 always represents the words "bingo night" in the title-sized "Fighting Game Bingo Night"
+on every page. It's very large black text in the impact font, used regularly in the site.
+*/
 h2 {
     font-family: "Impact";
     font-size: 114px;
     text-align: center;
     margin: 0;
+    color: black;
 }
 
+/* 
+h3 is used to represent section headings, and as such is moderatly large black impact text
+that is left justified. 
+*/
 h3 {
     margin: 20px;
     margin-left: 0px;
@@ -29,11 +48,13 @@ h3 {
     text-align: left;
     padding-left: 10px;
     padding-bottom: 0px;
-}
-p + h3 {
-    margin-top: 30px;
+    color: black;
 }
 
+/* 
+h4 is used for subsection titles, like individual games. As such it is just slightly enlarged
+courier text, bold and black and indented a bit from section headings
+*/
 h4 {
     font-family: "Courier";
     font-size: 20px;
@@ -46,6 +67,10 @@ h4 {
     margin-left: 0px;
 }
 
+/* 
+The main content of the webpage is in black courier font, of a small size, left aligned and indented
+farther than either the section headings or sub section headings. 
+*/
 p {
     font-family: "Courier";
     font-size: 18px;
@@ -55,16 +80,36 @@ p {
     margin-left: 0px;
 }
 
+/*
+Since h3 has little to no no bottom margin of it's own after an h3 a paragraph 
+gets an increased top margin to keep the spacings consistent
+*/
+p + h3 {
+    margin-top: 30px;
+}
+
+/*
+in a single place there are indented paragraphs, this class is just to indent
+another 20px past the paragraph indent
+*/
 .indented {
     padding-left: 50px;
 }
 
+/*
+Black large courier text for whe the title needs qualifying words.
+*/
 .subtitle {
     font-family: "Courier";
     font-size: 30px;
     text-align: center;
+    color: black;
 }
 
+/* 
+The main body of the page is a block offset away from the sidebar, taking 
+up just under the remaining 25% of the page width.
+*/
 .content {
     margin: 0px;
     display: block;
@@ -72,6 +117,10 @@ p {
     padding-left: 26vw;
 }
 
+/*
+The third fighting game bingo night gets an extra fancy subtitle under it's title,
+in a fun google font.
+*/
 .ris_subtitle {
     font-family: "Rubik Broken Fax";
     /* font-family: "Rubik Wet Paint"; */
@@ -80,6 +129,9 @@ p {
     color: darkred;
 }
 
+/*
+Small grey text providing context under images
+*/
 .img_subtitle {
     font-family: "Courier";
     font-size: 12px;
@@ -88,11 +140,20 @@ p {
     padding-top: 10px;
 }
 
+/*
+fFr divs containing the explanation paragraphs on games. Horizontal layout so
+if I later add screenshots of the gameplay to any game dexcription the dexcription 
+of the game and the screenshot will be inline with one another.
+*/
 .game_container {
     display: flex;
     padding-top: 0px;
 }
 
+/*
+All images get margins to keep body-text away, and a 5px boarder to set them from 
+the background color
+*/
 img {
     margin-left: 10px;
     margin-right: 10px;
@@ -101,12 +162,9 @@ img {
     display: block;
 }
 
-/* img:hover {
-    display: block;
-    margin: 20px auto;
-    transform: scale(2) translate(-200px);
-} */
-
+/*
+For homepage links, impact text in red but the size of paragraph text. 
+*/
 .body_link {
 	color: #5c0000;
 	font-size: 18px;
@@ -115,10 +173,14 @@ img {
 	font-family: "Impact";
 }
 
+/*
+All links turn blue on hover
+*/
 a:hover {
     color: blue;
 }
 
+/* Clean tables with collapsed boarders */
 table {
     border-collapse: collapse;
     width: 100%;
@@ -126,6 +188,7 @@ table {
     box-sizing: border-box;
 }
 
+/* table cells get red boarders, left aligned text, and text the same size as in paragraphs. */
 th, td {
     border: 1px solid #5c0000;
     padding: 8px;
@@ -133,16 +196,19 @@ th, td {
     font-size: 18px;
 }
 
+/* Headers get the dark grey background and red text of the sidebar */
 th {
     background-color: #1f232a;
     color: #a30000;
     font-family: "Impact";
 }
 
+/* table data gets courier font to look just like paragraph text. */
 td {
     font-family: "Courier";
 }
 
+/* If a table is imitating bingo card squares it needs clean square cells */
 .square_table td {
     width: 200px;
     height: 200px;
@@ -151,6 +217,7 @@ td {
     box-sizing: border-box;
 }
 
+/* centere square tables in the page.  */
 .square_table {
     width: fit-content;
     margin: 0 auto;

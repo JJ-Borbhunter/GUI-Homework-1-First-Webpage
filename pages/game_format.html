@@ -1,18 +1,38 @@
+<!--
+File: game_Format.html
+GUI Assignment: Creating Your First Web Page
+James Bord, UMass Lowell Computer Science, wzhou@cs.uml.edu
+Copyright (c) 2021 by Bord. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on May 25, 2026
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>FGBN The Website</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Monoton&family=Rubik+Broken+Fax&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
   <script src="script.js"></script>
 </head>
-<div id="sidebar-container"></div>
 <body class="background">
+    <!-- container for the script-loaded sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- container for the other 75% of the page, the content that scrolls -->
     <div class="content">
+        <!-- 
+        A title block. A "subtitle" s first just because it looks right in this application.
+        The "rules and workings" are less important than the event name iself.
+        -->
         <div class="subtitle" style="padding-top: 20px;">The Rules and Workings of:</div>
         <h1>FIGHTING GAME</h1>
         <h2>BINGO NIGHT</h2>
 
+        <!-- explanation of the bingo card system, including an example image -->
         <div style="display: flex;">
             <div>
                 <h3>The Bingo Card</h3>
@@ -43,6 +63,7 @@
             </div>
         </div>
 
+        <!-- Help section on how to chose your games -->
         <h3>The Game List</h3>
         <p>
             Traditionally a FGBN contains 8 seperate games. These should all be fighting games, but
@@ -57,6 +78,10 @@
             they don't have an excuse to fall back on when they lose &#128521;. 
         </p>
 
+        <!-- 
+        Explanation of how to set the 25 challenge squares. Includes a table imitating 
+        the bingo squraes. 
+        -->
         <h3>The Bingo Card Squares</h3>
         <p>
             Each game, assuming there is 8 games, has three squares of the card dedicated to it.
@@ -80,7 +105,7 @@
             players will have more fun if allowed to leverage their particular skills a little bit. 
         </p>
 
-
+        <!-- Several paragraphs on setting up your location and computers -->
         <h3>The Setup</h3>
         <p>
             Getting 8 machines in place with controllers is no easy feat. This is an event that must
@@ -111,12 +136,15 @@
             DOSBox based ports, but they support Windows, as well as Linux and Macos, and every
             fighting game enjoyer likes a good old Mortal Kombat game. They also play well with 
             cheap SNES controllers! Emulation of the Dreamcast/PS1 and earlier consoles is also 
-            just about perfec nowadays, and you can even avoid the legal questions of downloading
+            just about perfect nowadays, and you can even avoid the legal questions of downloading
             old ROMs by playing them online, romless, in a browser, provided you have an internet
             connection. 
         </p>
 
-
+        <!-- 
+        Information on the information cards used to expalin the games. 
+        Includes a left-justified example image. 
+        -->
         <div style="display: flex;">
             <div>
                  <img src="../images/info_card.png" alt="Information Card for Marvel Nemesis" width="350" height="450">
@@ -140,20 +168,23 @@
             </div>
         </div>
 
+        <!-- Conclusion paragraph -->
         <p>
             And that should be just about everything needed to run a sucessful <b>Fighting Game Bingo Night</b>. 
             Godspeed and good-fun to you. 
         </p>
     </div>
-<script>
-fetch("sidebar.html")
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById("sidebar-container").innerHTML = html;
-    })
-    .catch(error => {
-        console.error("Failed to load sidebar:", error);
-    });
-</script> 
+
+    <!-- The usual script loading the sidebar contents -->
+    <script>
+    fetch("sidebar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("sidebar-container").innerHTML = html;
+        })
+        .catch(error => {
+            console.error("Failed to load sidebar:", error);
+        });
+    </script> 
 </body>
 </html>

@@ -1,27 +1,42 @@
+<!--
+File: fgbn3.html
+GUI Assignment: Creating Your First Web Page
+James Bord, UMass Lowell Computer Science, wzhou@cs.uml.edu
+Copyright (c) 2021 by Bord. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on May 25, 2026
+-->
+
 <!DOCTYPE html>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Monoton&family=Rubik+Broken+Fax&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>FGBN The Website</title>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Monoton&family=Rubik+Broken+Fax&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
   <script src="script.js"></script>
 </head>
 <body>
+    <!-- container for the various elements of the sidebar -->
     <div id="sidebar-container"></div>
+
+    <!-- container for the other 75% of the page, holding the article itself -->
     <div class="content">
+        <!-- Red title with a fun, alternate font subtitle -->
         <h1 style="color: darkred">FIGHTING GAME</h1>
         <h2>BINGO NIGHT</h2>
         <div class="ris_subtitle">ABSOLUTE&nbsp;&nbsp;ANARCHY</div>
         <br>
+
+        <!-- disclaimer that the event is not yet fully ironed out -->
         <p style="text-align: center;">
             <b>IMPORTANT:</b><br> This event is still being planned. As such 
             details on this page may be missing and are subject to change. Thank you.
         </p>
+
+        <!-- general layout of the event, including a table of details with the signup link -->
          <div style="display: flex;">
             <div style="padding-right: 50px;">
             <p>
@@ -54,12 +69,15 @@
                 increased. 
             </p>
             </div>
+
+            <!-- Placeholder for an image of the FGBN3 bingo card -->
             <div>
                  <img src="../images/Bingo3.png" alt="FGBN3 Bingo card" width="350" height="450">
                  <div class="img_subtitle">A lackluster missing example of a bingo card</div>
             </div>
         </div>
 
+        <!-- Explanation of the 8 games we plan to include.  -->
         <h3>The Games</h3>
 
         <h4>For Honor and Super Smash Brothers Ultimate</h4>
@@ -201,11 +219,13 @@
             </div>
         </div>
 
+        <!-- Explanation of the general challenges in play -->
         <h3>General Challenges</h3>
         <p>Have your taller player win a 1v2.</p>
         <p>Have your shorter player win a 1v2.</p>
         <div style="padding: 10px;"></div>
 
+        <!-- 2 games we might play that we currently don't intend to. -->
         <h3>Games in Contention</h3>
 
         <h4>Dragon Ball Fighter Z</h4>
@@ -242,7 +262,6 @@
             </div>
         </div>
     </div>
-</body>
 
 <script>
 fetch("sidebar.html")
@@ -254,4 +273,5 @@ fetch("sidebar.html")
         console.error("Failed to load sidebar:", error);
     });
 </script> 
+</body>
 </html>

@@ -1,3 +1,7 @@
+/* 
+dark grey block with a red boarder to contain the elements of the sidebar.
+Takes up 25% of the screen and has a column justified layout.
+*/
 .sidebar {
     background-color: #1f232a;
     border: 3px solid #5c0000;
@@ -10,6 +14,10 @@
 	position: fixed;
 }
 
+/* 
+Grey moderate sized text for links, in the impact font, one of the two fonts 
+included in the event theme. The links are not underlined
+*/
 .sidebar_link {
 	color: grey;
 	padding-left: 20px;
@@ -19,10 +27,16 @@
 	text-decoration: none;
 	font-family: "Impact";
 }
+
+/* The links turn blue on hover */
 .sidebar_link:hover, .sidebar_title:hover {
 	color: blue;
 }
 
+/* 
+Large red text in the Monoton font, the primary font for the event. 
+Serves as the homepage link and "logo" for the website
+*/
 .sidebar_title {
 	color: #a30000;
 	text-align: center;
@@ -32,11 +46,11 @@
 	font-size: 64px;
 }
 
+/* large red text used to seperate the links into sections */
 .sidebar_subtitle {
 	padding-left: 10px;
 	padding-top: 30px;
 	font-family: "Monoton";
 	color: #a30000;
 	font-size: 20px;
-	
 }

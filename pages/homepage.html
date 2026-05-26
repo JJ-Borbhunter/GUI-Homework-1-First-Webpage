@@ -1,22 +1,35 @@
+<!--
+File: homepage.html
+GUI Assignment: Creating Your First Web Page
+James Bord, UMass Lowell Computer Science, wzhou@cs.uml.edu
+Copyright (c) 2021 by Bord. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on May 25, 2026
+-->
+
 <!DOCTYPE html>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.comcss2?family=Monoton&display=swap" rel="stylesheet">
-
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>FGBN The Website</title>
   <link rel="stylesheet" href="../css/style.css">
+  <!-- The next three lines are links to google fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.comcss2?family=Monoton&display=swap" rel="stylesheet">
   <script src="script.js"></script>
 </head>
 <body>
+    <!-- Container for the sidebar -->
     <div id="sidebar-container"></div>
+
+    <!-- Container for everything but the sidebar, i.d. the scrolling part of the page -->
     <div class="content">
+        <!-- Title -->
         <h1 style>FIGHTING GAME</h1>
         <h2>BINGO NIGHT</h2>
+
+        <!-- Introduction paragraph -->
         <p>
             Welcome to the home of <b>FIGHTING GAME BINGO NIGHT</b> the wittiest and 
             whackiest home-arcade themed event specifically dedicated to fighting games
@@ -25,6 +38,7 @@
             to host your own, welcome!
         </p>
         
+        <!-- Paragraph explaining contents. Flex is being used for a "paragraphs beside picture" layout. -->
         <h3>Site Contents</h3>
         <div style="display: flex;">
             <div style="display: flex; flex-direction: column;">
@@ -42,10 +56,13 @@
             <h4 style="margin-top: auto; margin-bottom: 0px;">Previous Fighting Game Bingo Nights</h4>
             </div>
 
+            <!-- It really is just a random drawing of a knight. -->
             <img src="../images/knight.jpeg" 
             alt="Random drawing of a knight" width="200" height="333"
             style="margin-left: auto;">
         </div>
+
+        <!-- Table recounting and linking to all previous events -->
         <table>
             <tr>
                 <th>Name</th>
@@ -64,6 +81,7 @@
             </tr>
         </table>
 
+        <!-- Table of contact information -->
         <h4>Contact the Creator</h4>
         <table>
             <tr>
@@ -76,16 +94,16 @@
         </table>
     </div>
 
+    <!-- Script to load the sidebar -->
+    <script>
+    fetch("sidebar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("sidebar-container").innerHTML = html;
+        })
+        .catch(error => {
+            console.error("Failed to load sidebar:", error);
+        });
+    </script> 
 </body>
-
-<script>
-fetch("sidebar.html")
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById("sidebar-container").innerHTML = html;
-    })
-    .catch(error => {
-        console.error("Failed to load sidebar:", error);
-    });
-</script> 
 </html>

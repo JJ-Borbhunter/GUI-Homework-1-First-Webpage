@@ -1,3 +1,12 @@
+<!--
+File: fgbn1.html
+GUI Assignment: Creating Your First Web Page
+James Bord, UMass Lowell Computer Science, wzhou@cs.uml.edu
+Copyright (c) 2021 by Bord. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on May 25, 2026
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +18,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
     <script src="script.js"></script>
 </head>
-
 <body>
+    <!-- container for the sidebar that gets loaded by a script later -->
     <div id="sidebar-container"></div>
+
+    <!-- Container for the scrolling section containing the main content -->
     <div class="content">
+
+        <!-- A fun little title -->
         <h1 style="color: darkviolet;">FIGHTING GAME</h1>
         <h2>BINGO NIGHT</h2>
         <div class="subtitle">The Original Event</div>
         <br>
 
+        <!-- History paragraph and an image of one of the original bingo cards -->
         <div style="display: flex;">
             <div>
             <p>
@@ -50,6 +64,7 @@
             </div>
         </div>
 
+        <!-- 8 sub-sections, one for each game. -->
         <h3>The Games</h3>
 
         <h4>Mortal Kombat 1</h4>
@@ -232,7 +247,7 @@
             </div>
         </div>
 
-
+        <!-- paragraph on the final result of the event -->
         <h3>The Winner</h3>
         <p>
             The event, unfortunatly for him, was won by the initial coordinator, James Bord. It was 
@@ -244,16 +259,17 @@
         </p>
     </div>
 
-<script>
-fetch("sidebar.html")
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById("sidebar-container").innerHTML = html;
-    })
-    .catch(error => {
-        console.error("Failed to load sidebar:", error);
-    });
-</script> 
+    <!-- Script that loads the sidebar from sidebar.html -->
+    <script>
+    fetch("sidebar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("sidebar-container").innerHTML = html;
+        })
+        .catch(error => {
+            console.error("Failed to load sidebar:", error);
+        });
+    </script> 
 
 </body>
 </html>

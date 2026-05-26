@@ -1,23 +1,35 @@
+<!--
+File: fgbn2.html
+GUI Assignment: Creating Your First Web Page
+James Bord, UMass Lowell Computer Science, wzhou@cs.uml.edu
+Copyright (c) 2021 by Bord. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by JB on May 25, 2026
+-->
+
 <!DOCTYPE html>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-
-
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>FGBN The Website</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <script src="script.js"></script>
+    <meta charset="utf-8">
+    <title>FGBN The Website</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 <body>
+    <!-- Container for the sidebar elements -->
     <div id="sidebar-container"></div>
+
+    <!-- container for the actual article -->
     <div class="content">
+        <!-- blue title for FGBN2 to have variety -->
         <h1 style="color: blue">FIGHTING GAME</h1>
         <h2 style="font-size: 100px;">BINGO NIGHT 2</h2>
         <br>
+
+        <!-- History paragraph with an example of the bingo card as a right-justified png -->
          <div style="display: flex;">
             <div>
             <p>
@@ -43,6 +55,7 @@
             </div>
         </div>
 
+        <!-- 8 paragraphs on the various games played -->
         <h3>The Games</h3>
 
         <h4>
@@ -181,6 +194,7 @@
             </div>
         </div>
         
+        <!-- Paragraph on the outcome -->
         <h3>The Winner</h3>
         <p>
             In the end, Bord again emerged with the most bingos. However, since that feels rather rigged, 
@@ -191,16 +205,17 @@
             the Nintendo series of the same name, that served as the trophy. 
         </p>
     </div>
-</body>
 
-<script>
-fetch("sidebar.html")
-    .then(response => response.text())
-    .then(html => {
-        document.getElementById("sidebar-container").innerHTML = html;
-    })
-    .catch(error => {
-        console.error("Failed to load sidebar:", error);
-    });
-</script> 
+    <!-- Script fetching the sidebar contents -->
+    <script>
+    fetch("sidebar.html")
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("sidebar-container").innerHTML = html;
+        })
+        .catch(error => {
+            console.error("Failed to load sidebar:", error);
+        });
+    </script> 
+</body>
 </html>
